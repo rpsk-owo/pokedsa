@@ -1,0 +1,205 @@
+:root {
+    --bg: #10131c;
+    --card: #1b2030;
+    --text: #f4f5fb;
+    --muted: #a7aec2;
+    --yellow: #ffcb45;
+    --border: #343b50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--yellow);
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--yellow);
+}
+
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(ellipse at top, #293453, var(--bg) 70%);
+}
+
+.eyebrow {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 72px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-description {
+    max-width: 580px;
+    margin: 0 auto 30px;
+    color: var(--muted);
+}
+
+
+.primary-button {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: #171923;
+    padding: 12px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-button:hover {
+    background-color: #f2b928;
+}
+
+/* DSA topics */
+.learning-section,
+.about-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 65px 24px;
+}
+
+.learning-section h2,
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.learning-section > p:not(.eyebrow),
+.about-section p {
+    color: var(--muted);
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.topic-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 26px;
+}
+
+.topic-card:hover {
+    border-color: var(--yellow);
+}
+
+.topic-number {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.topic-card h3 {
+    font-size: 22px;
+    margin: 12px 0 6px;
+}
+
+.topic-card p {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.topic-status {
+    color: var(--yellow);
+    font-size: 13px;
+}
+
+/* About and footer */
+.about-section {
+    border-top: 1px solid var(--border);
+}
+
+.about-section p {
+    max-width: 800px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.footer-note {
+    max-width: 650px;
+    margin: 12px auto 0;
+    font-size: 12px;
+}
+
+/* Make the page work on smaller screens */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 14px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 75px 20px;
+    }
+
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-section,
+    .about-section {
+        padding: 50px 20px;
+    }
+}
